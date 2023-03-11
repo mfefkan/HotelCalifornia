@@ -26,7 +26,7 @@ namespace Project.ENTITIES.Models
 
         public Reservation()
         {
-            this.Rooms = new List<Room>();
+            this.RoomReservations = new List<RoomReservation>();
             this.GuestReservations = new List<GuestReservation>();
             this.Orders = new List<Order>();
         }
