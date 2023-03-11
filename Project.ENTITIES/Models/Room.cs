@@ -17,6 +17,8 @@ namespace Project.ENTITIES.Models
 
         public int RoomTypeID { get; set; }
 
+        public decimal  PricePerDay { get; set; }
+
         //Relational 
         public virtual List<RoomReservation> RoomReservations { get; set; }
         public virtual RoomType RoomType { get; set; }

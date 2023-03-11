@@ -35,26 +35,30 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbRoomStatus2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRoom18 = new System.Windows.Forms.Button();
+            this.btnRoom14 = new System.Windows.Forms.Button();
+            this.btnRoom17 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRoom13 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.grbRoomStatus2 = new System.Windows.Forms.GroupBox();
+            this.btnRoom20 = new System.Windows.Forms.Button();
+            this.btnRoom16 = new System.Windows.Forms.Button();
+            this.btnRoom12 = new System.Windows.Forms.Button();
+            this.btnRoom19 = new System.Windows.Forms.Button();
+            this.btnRoom15 = new System.Windows.Forms.Button();
+            this.btnRoom11 = new System.Windows.Forms.Button();
+            this.grbRoomStatus1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnRoom8 = new System.Windows.Forms.Button();
             this.btnRoom4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTarih2 = new System.Windows.Forms.Label();
             this.btnRoom7 = new System.Windows.Forms.Button();
@@ -70,12 +74,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRegistrationName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.grbRoomStatus2.SuspendLayout();
+            this.grbRoomStatus1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCheckOut
@@ -122,6 +122,7 @@
             this.btnRegister.TabIndex = 23;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // dtpCheckOut
             // 
@@ -137,31 +138,40 @@
             this.dtpCheckIn.Size = new System.Drawing.Size(258, 22);
             this.dtpCheckIn.TabIndex = 22;
             // 
-            // groupBox1
+            // grbRoomStatus2
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Location = new System.Drawing.Point(475, 318);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(498, 128);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "4 People";
+            this.grbRoomStatus2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.grbRoomStatus2.Controls.Add(this.label14);
+            this.grbRoomStatus2.Controls.Add(this.label10);
+            this.grbRoomStatus2.Controls.Add(this.label12);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom18);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom14);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom17);
+            this.grbRoomStatus2.Controls.Add(this.label13);
+            this.grbRoomStatus2.Controls.Add(this.label11);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom13);
+            this.grbRoomStatus2.Controls.Add(this.label9);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom20);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom16);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom12);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom19);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom15);
+            this.grbRoomStatus2.Controls.Add(this.btnRoom11);
+            this.grbRoomStatus2.Location = new System.Drawing.Point(475, 318);
+            this.grbRoomStatus2.Name = "grbRoomStatus2";
+            this.grbRoomStatus2.Size = new System.Drawing.Size(498, 128);
+            this.grbRoomStatus2.TabIndex = 19;
+            this.grbRoomStatus2.TabStop = false;
+            this.grbRoomStatus2.Text = "4 People";
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label14.Location = new System.Drawing.Point(413, 86);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 20);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Cleaning";
             // 
             // label10
             // 
@@ -181,32 +191,40 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Available";
             // 
-            // button1
+            // btnRoom18
             // 
-            this.button1.Location = new System.Drawing.Point(158, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 45);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "108";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRoom18.Location = new System.Drawing.Point(158, 72);
+            this.btnRoom18.Name = "btnRoom18";
+            this.btnRoom18.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom18.TabIndex = 8;
+            this.btnRoom18.Text = "118";
+            this.btnRoom18.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnRoom14
             // 
-            this.button2.Location = new System.Drawing.Point(234, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 45);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "104";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRoom14.Location = new System.Drawing.Point(234, 20);
+            this.btnRoom14.Name = "btnRoom14";
+            this.btnRoom14.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom14.TabIndex = 8;
+            this.btnRoom14.Text = "114";
+            this.btnRoom14.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnRoom17
             // 
-            this.button3.Location = new System.Drawing.Point(82, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 45);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "107";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRoom17.Location = new System.Drawing.Point(82, 72);
+            this.btnRoom17.Name = "btnRoom17";
+            this.btnRoom17.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom17.TabIndex = 8;
+            this.btnRoom17.Text = "117";
+            this.btnRoom17.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.DarkOrange;
+            this.label13.Location = new System.Drawing.Point(386, 86);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 19);
+            this.label13.TabIndex = 11;
             // 
             // label11
             // 
@@ -216,14 +234,14 @@
             this.label11.Size = new System.Drawing.Size(21, 19);
             this.label11.TabIndex = 11;
             // 
-            // button4
+            // btnRoom13
             // 
-            this.button4.Location = new System.Drawing.Point(158, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 45);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "103";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRoom13.Location = new System.Drawing.Point(158, 20);
+            this.btnRoom13.Name = "btnRoom13";
+            this.btnRoom13.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom13.TabIndex = 8;
+            this.btnRoom13.Text = "113";
+            this.btnRoom13.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -233,87 +251,96 @@
             this.label9.Size = new System.Drawing.Size(21, 19);
             this.label9.TabIndex = 11;
             // 
-            // button5
+            // btnRoom20
             // 
-            this.button5.Location = new System.Drawing.Point(310, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 45);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "110";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRoom20.Location = new System.Drawing.Point(310, 72);
+            this.btnRoom20.Name = "btnRoom20";
+            this.btnRoom20.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom20.TabIndex = 8;
+            this.btnRoom20.Text = "120";
+            this.btnRoom20.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnRoom16
             // 
-            this.button6.Location = new System.Drawing.Point(6, 72);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 45);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "106";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnRoom16.Location = new System.Drawing.Point(6, 72);
+            this.btnRoom16.Name = "btnRoom16";
+            this.btnRoom16.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom16.TabIndex = 8;
+            this.btnRoom16.Text = "116";
+            this.btnRoom16.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnRoom12
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(82, 21);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 45);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "102";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnRoom12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRoom12.Location = new System.Drawing.Point(82, 21);
+            this.btnRoom12.Name = "btnRoom12";
+            this.btnRoom12.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom12.TabIndex = 8;
+            this.btnRoom12.Text = "112";
+            this.btnRoom12.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnRoom19
             // 
-            this.button8.Location = new System.Drawing.Point(234, 72);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(70, 45);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "109";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRoom19.Location = new System.Drawing.Point(234, 72);
+            this.btnRoom19.Name = "btnRoom19";
+            this.btnRoom19.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom19.TabIndex = 8;
+            this.btnRoom19.Text = "119";
+            this.btnRoom19.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnRoom15
             // 
-            this.button9.Location = new System.Drawing.Point(310, 21);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 45);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "105";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnRoom15.Location = new System.Drawing.Point(310, 21);
+            this.btnRoom15.Name = "btnRoom15";
+            this.btnRoom15.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom15.TabIndex = 8;
+            this.btnRoom15.Text = "115";
+            this.btnRoom15.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnRoom11
             // 
-            this.button10.BackColor = System.Drawing.Color.Lime;
-            this.button10.Location = new System.Drawing.Point(6, 21);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(70, 45);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "101";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnRoom11.BackColor = System.Drawing.Color.Lime;
+            this.btnRoom11.Location = new System.Drawing.Point(6, 21);
+            this.btnRoom11.Name = "btnRoom11";
+            this.btnRoom11.Size = new System.Drawing.Size(70, 45);
+            this.btnRoom11.TabIndex = 8;
+            this.btnRoom11.Text = "111";
+            this.btnRoom11.UseVisualStyleBackColor = false;
             // 
-            // grbRoomStatus2
+            // grbRoomStatus1
             // 
-            this.grbRoomStatus2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.grbRoomStatus2.Controls.Add(this.label3);
-            this.grbRoomStatus2.Controls.Add(this.label4);
-            this.grbRoomStatus2.Controls.Add(this.label8);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom8);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom4);
-            this.grbRoomStatus2.Controls.Add(this.label2);
-            this.grbRoomStatus2.Controls.Add(this.label5);
-            this.grbRoomStatus2.Controls.Add(this.lblTarih2);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom7);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom3);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom10);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom6);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom2);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom9);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom5);
-            this.grbRoomStatus2.Controls.Add(this.btnRoom1);
-            this.grbRoomStatus2.Location = new System.Drawing.Point(475, 168);
-            this.grbRoomStatus2.Name = "grbRoomStatus2";
-            this.grbRoomStatus2.Size = new System.Drawing.Size(498, 131);
-            this.grbRoomStatus2.TabIndex = 20;
-            this.grbRoomStatus2.TabStop = false;
-            this.grbRoomStatus2.Text = "2 People";
+            this.grbRoomStatus1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.grbRoomStatus1.Controls.Add(this.label3);
+            this.grbRoomStatus1.Controls.Add(this.label4);
+            this.grbRoomStatus1.Controls.Add(this.label8);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom8);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom4);
+            this.grbRoomStatus1.Controls.Add(this.label2);
+            this.grbRoomStatus1.Controls.Add(this.label5);
+            this.grbRoomStatus1.Controls.Add(this.lblTarih2);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom7);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom3);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom10);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom6);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom2);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom9);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom5);
+            this.grbRoomStatus1.Controls.Add(this.btnRoom1);
+            this.grbRoomStatus1.Location = new System.Drawing.Point(475, 168);
+            this.grbRoomStatus1.Name = "grbRoomStatus1";
+            this.grbRoomStatus1.Size = new System.Drawing.Size(498, 131);
+            this.grbRoomStatus1.TabIndex = 20;
+            this.grbRoomStatus1.TabStop = false;
+            this.grbRoomStatus1.Text = "2 People";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Location = new System.Drawing.Point(413, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Cleaning";
             // 
             // label4
             // 
@@ -350,6 +377,14 @@
             this.btnRoom4.TabIndex = 8;
             this.btnRoom4.Text = "104";
             this.btnRoom4.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.DarkOrange;
+            this.label2.Location = new System.Drawing.Point(386, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 19);
+            this.label2.TabIndex = 11;
             // 
             // label5
             // 
@@ -481,40 +516,6 @@
             this.txtRegistrationName.Size = new System.Drawing.Size(125, 22);
             this.txtRegistrationName.TabIndex = 14;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.DarkOrange;
-            this.label2.Location = new System.Drawing.Point(386, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 19);
-            this.label2.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(413, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Cleaning";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.DarkOrange;
-            this.label13.Location = new System.Drawing.Point(386, 86);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 19);
-            this.label13.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(413, 86);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Cleaning";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -527,8 +528,8 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.dtpCheckOut);
             this.Controls.Add(this.dtpCheckIn);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbRoomStatus2);
+            this.Controls.Add(this.grbRoomStatus1);
             this.Controls.Add(this.lstPreRes);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -536,8 +537,9 @@
             this.Controls.Add(this.txtRegistrationName);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.grbRoomStatus2.ResumeLayout(false);
+            this.grbRoomStatus1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,22 +554,22 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbRoomStatus2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRoom18;
+        private System.Windows.Forms.Button btnRoom14;
+        private System.Windows.Forms.Button btnRoom17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRoom13;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.GroupBox grbRoomStatus2;
+        private System.Windows.Forms.Button btnRoom20;
+        private System.Windows.Forms.Button btnRoom16;
+        private System.Windows.Forms.Button btnRoom12;
+        private System.Windows.Forms.Button btnRoom19;
+        private System.Windows.Forms.Button btnRoom15;
+        private System.Windows.Forms.Button btnRoom11;
+        private System.Windows.Forms.GroupBox grbRoomStatus1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRoom8;
