@@ -1,0 +1,36 @@
+1 App User				1 res. personeli
+1 res. personeli			1 AppUser*
+
+1 rezervasyon				n oda
+1 oda 					n rezervasyon*   	
+
+1 rezervasyon				n misafir		(Misafirin içine koy direk RoomNumber propu koy.....****)
+1 misafir				n rezervasyon* 	       
+
+1 müþteri				n rezervasyon 
+1 rezervasyon				1 müþteriye *
+
+1 res .personeli 			n rezervasyon
+1 rezervasyon				1 res. personeli*
+
+1 sipariþ				1 rezervasyon
+1 rezervasyon				n sipariþte.... *********Yeniden tasarlanacak.******
+
+1 ürün					n sipariþ  	*********Hizmetlilerin oda servisi için.... totalPrice eklenecek. RoomNumber(string) junction için
+1 sipariþ 				n ürün
+
+1 tip					n oda		
+1 oda					1 tip	
+
+1 oda					n HouseKeeper
+1 HouseKeeper				n oda*
+
+Classes
+AppUser, ReceptionPersonel, Reservation, Room, Guest, Customer, RoomType, Order, Product, HouseKeeper, 
+Junctions
+RoomReservation , GuestReservation , OrderProduct , HouseKeeperRoom
+1-1
+AppUser-ReceptionPersonel
+Enums
+DataSatus
+RoomStatus (Available, Booked , Cleaning)
