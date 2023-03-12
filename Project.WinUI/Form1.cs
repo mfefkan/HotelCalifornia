@@ -36,7 +36,7 @@ namespace Project.WinUI
             if (_appUserRep.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text))
             {
                 string a = txtUserName.Text;
-                Form frm2 = new Form2(/*a*/);
+                Form frm2 = new Form2(a);
                 frm2.ShowDialog();
 
             }
@@ -225,11 +225,12 @@ namespace Project.WinUI
             AppUser user = new AppUser();
             ReceptionPersonel receptionPersonel = new ReceptionPersonel();
             user.ReceptionPersonel = receptionPersonel;
-            receptionPersonel.AppUser = user;
+            
             user.UserName = "";
             user.Password = "";
             receptionPersonel.FirstName = "Hacı Muro";
             receptionPersonel.LastName = "Türkoğlu";
+           
             _appUserRep.Add(user);
             _receptionPersonelRep.Add(receptionPersonel);
             btnAddAppUser.BackColor = Color.Green;
@@ -256,7 +257,7 @@ namespace Project.WinUI
             
             Product y = new Product();
             y.ProductName = "Köfte";
-            x.UnitPrice = Convert.ToDecimal(5);
+            y.UnitPrice = Convert.ToDecimal(5);
             _productRep.Add(y);
 
             Product z = new Product();

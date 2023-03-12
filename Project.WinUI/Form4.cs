@@ -35,20 +35,19 @@ namespace Project.WinUI
             cmbRoomNo.DataSource = _roomRep.ListRoomNumbers();
         }
 
-
+        decimal total;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             OrderProduct op = new OrderProduct();
             op.Product = cmbProduct.SelectedItem as Product;
-            op.RoomNo = (cmbRoomNo.SelectedItem as Room).RoomNo;
+            op.RoomNo = _roomRep.GetRoomByRoomNumber(cmbRoomNo.SelectedItem.ToString()).RoomNo;
 
-            decimal total = 0;
+            
 
-            listProduct.Items.Add(op);
-            foreach (object item in listProduct.Items)
-            {
-                total += (item as OrderProduct).Product.UnitPrice;
-            }
+            listProduct.Items.Add($"{op.Product} => Oda:{op.RoomNo}");
+          
+            total += (cmbProduct.SelectedItem as Product).UnitPrice;
+            
 
             lblTotal.Text = $"{total:C2}";
 
@@ -69,6 +68,8 @@ namespace Project.WinUI
                Reservation res = _reservationRep.Find(Convert.ToInt32(_roomRep.GetRoomByRoomNumber(op.RoomNo)));
                 res.Orders.Add(order);
                 _reservationRep.Update(res);
+                lblTotal.Text = "0";
+                total = 0;
             }
         }
     }

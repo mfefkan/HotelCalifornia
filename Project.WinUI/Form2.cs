@@ -20,7 +20,7 @@ namespace Project.WinUI
         ReservationRep _reservationRep;
         GuestRep _guestRep;
         RoomReservationRep _roomReservationRep;
-        public  Form2(/*string _appUserName*/)
+        public  Form2(string a)
         {
             _appUserRep = new AppUserRep();
             _roomRep = new RoomRep();
@@ -28,12 +28,9 @@ namespace Project.WinUI
             _guestRep = new GuestRep();
             _roomReservationRep = new RoomReservationRep();
             InitializeComponent();
+            _appUserName = a;
             
-            //foreach (Char s in _appUserName)
-            //{
-            //   s.ToString();
-            //    _appUserName = s.ToString();
-            //}
+            
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -70,22 +67,28 @@ namespace Project.WinUI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            if (lstPreRes.Items.Count <= 0)
+            {
+                MessageBox.Show("Lütfen oda seçiniz");
+                return;
+            }
             Customer c = new Customer();
             c.ReservationName = txtRegistrationName.Text;
             
             Reservation r = new Reservation();
-            //foreach (AppUser item in _appUserRep.GetAll())
-            //{
-            //    if (item.UserName == _appUserName)
-            //    {
-            //        r.ReceptionPersonel = item.ReceptionPersonel;
-            //        r.ReceptionPersonelID = item.ReceptionPersonel.ID;
-            //    }
-            //}
+            foreach (AppUser item in _appUserRep.GetAll())
+            {
+                if (item.UserName == _appUserName)
+                {
+                    r.ReceptionPersonel = item.ReceptionPersonel;
+                    //r.ReceptionPersonelID = item.ReceptionPersonel.ID;
+                }
+            }
             r.CheckInDate = dtpCheckIn.Value;
             r.CheckOutDate = dtpCheckOut.Value;
             r.Customer = c;
             r.CustomerID = c.ID;
+            _reservationRep.Add(r);
             c.Reservations.Add(r);        
 
             foreach (Room item in lstPreRes.Items)
@@ -110,6 +113,11 @@ namespace Project.WinUI
             {
                 Form frm3 = new Form3(res);
                 frm3.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aradığınız isimde rezervasyon bulunamadı");
+                return;
             }
             
         }

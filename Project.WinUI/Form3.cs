@@ -27,23 +27,7 @@ namespace Project.WinUI
             _guestRep = new GuestRep();
         }
         Reservation _reservation;
-        private void btnAddVisitorInfo_Click(object sender, EventArgs e)
-        {
-            Guest g = new Guest();
-            g.FirstName = txtFirstName.Text; 
-            g.LastName = txtLastName.Text;
-            
-            
-            GuestReservation gr = new GuestReservation();
-            gr.RoomNo = _selectedRoom.RoomNo;
-            gr.Guest = g;
-            gr.Reservation =_reservation;
-            gr.ReservationID = _reservation.ID;
-            gr.GuestID = g.ID;
-            _guestRep.Add(g);
-            _guestReservationRep.Add(gr);
-
-        }
+     
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -66,6 +50,25 @@ namespace Project.WinUI
         private void btnDone_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnAddGuest_Click(object sender, EventArgs e)
+        {
+            Guest g = new Guest();
+            g.FirstName = txtFirstName.Text;
+            g.LastName = txtLastName.Text;
+
+
+            GuestReservation gr = new GuestReservation();
+            gr.RoomNo = _selectedRoom.RoomNo;
+            gr.Guest = g;
+            gr.Reservation = _reservation;
+            gr.ReservationID = _reservation.ID;
+            gr.GuestID = g.ID;
+            _guestRep.Add(g);
+            _guestReservationRep.Add(gr);
+
+            lstRoomGuests.Items.Add(g.ToString());
         }
     }
 }

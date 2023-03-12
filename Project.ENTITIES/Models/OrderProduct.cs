@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
+    
     public class OrderProduct:BaseEntity
     {
         public int ProductID { get; set; }
@@ -18,9 +19,5 @@ namespace Project.ENTITIES.Models
         public virtual Product Product { get; set; }
         public virtual Order Order { get; set; }
 
-        public override string ToString()
-        {
-            return $"{Product.ProductName} {Product.UnitPrice} => {RoomNo}";
-        }
     }
 }

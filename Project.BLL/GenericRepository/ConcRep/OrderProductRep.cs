@@ -10,5 +10,6 @@ namespace Project.BLL.GenericRepository.ConcRep
 {
     public class OrderProductRep:BaseRep<OrderProduct>
     {
+      
     }
 }

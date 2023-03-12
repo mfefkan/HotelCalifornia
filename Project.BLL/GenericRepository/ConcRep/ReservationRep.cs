@@ -25,10 +25,7 @@ namespace Project.BLL.GenericRepository.ConcRep
                     break;
                 }
             }
-            else
-            {
-                throw new Exception("Aradığınız isme ait rezervasyon bulunamadı");
-            }
+           
             return reservation;
         }
     }

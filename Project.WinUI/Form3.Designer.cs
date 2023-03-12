@@ -31,8 +31,8 @@
             this.dtpEntry = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
-            this.lstRoomVisitors = new System.Windows.Forms.ListBox();
-            this.btnAddVisitorInfo = new System.Windows.Forms.Button();
+            this.lstRoomGuests = new System.Windows.Forms.ListBox();
+            this.btnAddGuest = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lstSelectedRooms = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,24 +66,24 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
-            // lstRoomVisitors
+            // lstRoomGuests
             // 
-            this.lstRoomVisitors.FormattingEnabled = true;
-            this.lstRoomVisitors.ItemHeight = 16;
-            this.lstRoomVisitors.Location = new System.Drawing.Point(443, 143);
-            this.lstRoomVisitors.Name = "lstRoomVisitors";
-            this.lstRoomVisitors.Size = new System.Drawing.Size(308, 100);
-            this.lstRoomVisitors.TabIndex = 18;
+            this.lstRoomGuests.FormattingEnabled = true;
+            this.lstRoomGuests.ItemHeight = 16;
+            this.lstRoomGuests.Location = new System.Drawing.Point(443, 143);
+            this.lstRoomGuests.Name = "lstRoomGuests";
+            this.lstRoomGuests.Size = new System.Drawing.Size(308, 100);
+            this.lstRoomGuests.TabIndex = 18;
             // 
-            // btnAddVisitorInfo
+            // btnAddGuest
             // 
-            this.btnAddVisitorInfo.Location = new System.Drawing.Point(280, 260);
-            this.btnAddVisitorInfo.Name = "btnAddVisitorInfo";
-            this.btnAddVisitorInfo.Size = new System.Drawing.Size(140, 23);
-            this.btnAddVisitorInfo.TabIndex = 17;
-            this.btnAddVisitorInfo.Text = "Add Visitor Info";
-            this.btnAddVisitorInfo.UseVisualStyleBackColor = true;
-            this.btnAddVisitorInfo.Click += new System.EventHandler(this.btnAddVisitorInfo_Click);
+            this.btnAddGuest.Location = new System.Drawing.Point(280, 260);
+            this.btnAddGuest.Name = "btnAddGuest";
+            this.btnAddGuest.Size = new System.Drawing.Size(140, 23);
+            this.btnAddGuest.TabIndex = 17;
+            this.btnAddGuest.Text = "Add Guest";
+            this.btnAddGuest.UseVisualStyleBackColor = true;
+            this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
             // label5
             // 
@@ -145,8 +145,8 @@
             this.Controls.Add(this.dtpEntry);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDone);
-            this.Controls.Add(this.lstRoomVisitors);
-            this.Controls.Add(this.btnAddVisitorInfo);
+            this.Controls.Add(this.lstRoomGuests);
+            this.Controls.Add(this.btnAddGuest);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lstSelectedRooms);
             this.Controls.Add(this.label2);
@@ -166,8 +166,8 @@
         private System.Windows.Forms.DateTimePicker dtpEntry;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.ListBox lstRoomVisitors;
-        private System.Windows.Forms.Button btnAddVisitorInfo;
+        private System.Windows.Forms.ListBox lstRoomGuests;
+        private System.Windows.Forms.Button btnAddGuest;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lstSelectedRooms;
         private System.Windows.Forms.Label label2;
