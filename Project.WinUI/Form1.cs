@@ -36,7 +36,7 @@ namespace Project.WinUI
             if (_appUserRep.Any(x => x.UserName == txtUserName.Text && x.Password == txtPassword.Text))
             {
                 string a = txtUserName.Text;
-                Form frm2 = new Form2(a);
+                Form frm2 = new Form2(/*a*/);
                 frm2.ShowDialog();
 
             }
