@@ -31,22 +31,23 @@ namespace Project.WinUI
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            cmbProduct.DataSource = _productRep.ListProducts();
+            cmbProduct.DataSource = _productRep.GetAll();
             cmbRoomNo.DataSource = _roomRep.ListRoomNumbers();
         }
 
         decimal total;
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            OrderProduct op = new OrderProduct();
-            op.Product = cmbProduct.SelectedItem as Product;
-            op.RoomNo = _roomRep.GetRoomByRoomNumber(cmbRoomNo.SelectedItem.ToString()).RoomNo;
 
-            
+            //OrderProduct op = new OrderProduct();
+            //op.Product = cmbProduct.SelectedItem as Product;
+            //op.RoomNo = _roomRep.GetRoomByRoomNumber(cmbRoomNo.SelectedItem.ToString()).RoomNo;
 
-            listProduct.Items.Add($"{op.Product} => Oda:{op.RoomNo}");
+
+
+            listProduct.Items.Add(cmbProduct.SelectedItem as Product);
           
-            total += (cmbProduct.SelectedItem as Product).UnitPrice;
+            //total += (cmbProduct.SelectedItem as Product).UnitPrice;
             
 
             lblTotal.Text = $"{total:C2}";
@@ -57,20 +58,39 @@ namespace Project.WinUI
         private void btnOrder_Click(object sender, EventArgs e)
         {
             Order order = new Order();
-            OrderProduct op = new OrderProduct();
-            foreach (object item in listProduct.Items)
+           
+            
+            foreach (Product item in listProduct.Items)
             {
-                op = item as OrderProduct;
+                OrderProduct op = new OrderProduct();
+                op.Order = order;
+                op.Product=item;
                 order.OrderProducts.Add(op);
-                _orderProductRep.Add(op);
-                _orderRep.Add(order);
+                op.RoomNo = cmbRoomNo.SelectedItem.ToString();
+                //op = item as OrderProduct;
+                //order.OrderProducts.Add(op);
+                //_orderProductRep.Add(op);
+                //_orderRep.Add(order);
 
-               Reservation res = _reservationRep.Find(Convert.ToInt32(_roomRep.GetRoomByRoomNumber(op.RoomNo)));
-                res.Orders.Add(order);
-                _reservationRep.Update(res);
-                lblTotal.Text = "0";
-                total = 0;
+               
+                // lblTotal.Text = "0";
+                // total = 0;
             }
+
+            foreach (Reservation item in _reservationRep.GetActives())
+            {
+                if (item.RoomReservations.Any(x => x.Room.RoomNo == cmbRoomNo.SelectedItem.ToString()))
+                {
+                    item.Orders.Add(order);
+                    //_reservationRep.Update(item);
+                    break;
+                }
+            }
+
+            //Reservation res = _reservationRep.Find(Convert.ToInt32(_roomRep.GetRoomByRoomNumber(cmbRoomNo.SelectedItem.ToString())));
+            //res.Orders.Add(order);
+          
+            //_orderRep.Add(order);
         }
     }
 }

@@ -13,20 +13,25 @@ namespace Project.WinUI
 {
     public partial class Form5 : Form
     {
+        List<Guest> g = new List<Guest>();
         public Form5(List<Guest> guests)
         {
             foreach (Guest guest in guests)
             {
-                if (guest.ToString() != string.Empty)
-                {
-                    lstGuests.Items.Add(guest);
-                }
-                else
-                {
-                    continue;
-                }
+
+                g.Add(guest);
+
             }
             InitializeComponent();
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            foreach (Guest item in g)
+            {
+                lstGuests.Items.Add(item);
+            }
         }
     }
 }

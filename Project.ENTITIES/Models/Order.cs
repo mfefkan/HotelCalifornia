@@ -16,13 +16,14 @@ namespace Project.ENTITIES.Models
 
 
         //Relational Properties
-        public Reservation Reservation { get; set; }
+        public virtual Reservation Reservation { get; set; }
         public virtual List<OrderProduct> OrderProducts { get; set; }
 
 
         public Order()
         {
             this.OrderProducts = new List<OrderProduct>();
+            
         }
 
         public decimal CountTotalCost()
