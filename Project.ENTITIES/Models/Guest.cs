@@ -19,5 +19,23 @@ namespace Project.ENTITIES.Models
         {
             this.GuestReservations = new List<GuestReservation>();
         }
+
+        public override string ToString()
+        {
+            string info = string.Empty;
+            foreach (GuestReservation item in GuestReservations)
+            {
+                
+                if (item.DeletedDate == null)
+                {
+                    info = $"{FirstName} {LastName} => Room:{item.RoomNo}";
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return info;
+        }
     }
 }

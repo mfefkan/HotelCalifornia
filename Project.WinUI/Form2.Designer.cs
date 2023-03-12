@@ -36,22 +36,22 @@
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
             this.grbRoomStatus2 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.btnRoom18 = new System.Windows.Forms.Button();
             this.btnRoom14 = new System.Windows.Forms.Button();
             this.btnRoom17 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnRoom13 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnRoom20 = new System.Windows.Forms.Button();
             this.btnRoom16 = new System.Windows.Forms.Button();
             this.btnRoom12 = new System.Windows.Forms.Button();
             this.btnRoom19 = new System.Windows.Forms.Button();
             this.btnRoom15 = new System.Windows.Forms.Button();
             this.btnRoom11 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.grbRoomStatus1 = new System.Windows.Forms.GroupBox();
             this.btnRoom8 = new System.Windows.Forms.Button();
             this.btnRoom4 = new System.Windows.Forms.Button();
@@ -80,6 +80,7 @@
             this.btnCheckOut.TabIndex = 27;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnGuestList
             // 
@@ -89,6 +90,7 @@
             this.btnGuestList.TabIndex = 26;
             this.btnGuestList.Text = "Guest List";
             this.btnGuestList.UseVisualStyleBackColor = true;
+            this.btnGuestList.Click += new System.EventHandler(this.btnGuestList_Click);
             // 
             // btnRoomService
             // 
@@ -98,6 +100,7 @@
             this.btnRoomService.TabIndex = 25;
             this.btnRoomService.Text = "Room Service";
             this.btnRoomService.UseVisualStyleBackColor = true;
+            this.btnRoomService.Click += new System.EventHandler(this.btnRoomService_Click);
             // 
             // btnSearchRes
             // 
@@ -107,6 +110,7 @@
             this.btnSearchRes.TabIndex = 24;
             this.btnSearchRes.Text = "Search Reservation";
             this.btnSearchRes.UseVisualStyleBackColor = true;
+            this.btnSearchRes.Click += new System.EventHandler(this.btnSearchRes_Click);
             // 
             // btnRegister
             // 
@@ -152,33 +156,6 @@
             this.grbRoomStatus2.TabStop = false;
             this.grbRoomStatus2.Text = "4 People";
             // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(797, 308);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Cleaning";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label10.Location = new System.Drawing.Point(653, 307);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 20);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Booked";
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label12.Location = new System.Drawing.Point(505, 308);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 20);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Available";
-            // 
             // btnRoom18
             // 
             this.btnRoom18.Location = new System.Drawing.Point(158, 72);
@@ -206,22 +183,6 @@
             this.btnRoom17.Text = "117";
             this.btnRoom17.UseVisualStyleBackColor = true;
             // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.DarkOrange;
-            this.label13.Location = new System.Drawing.Point(770, 308);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 19);
-            this.label13.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(626, 307);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 19);
-            this.label11.TabIndex = 11;
-            // 
             // btnRoom13
             // 
             this.btnRoom13.Location = new System.Drawing.Point(158, 20);
@@ -230,14 +191,6 @@
             this.btnRoom13.TabIndex = 8;
             this.btnRoom13.Text = "113";
             this.btnRoom13.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(478, 308);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 19);
-            this.label9.TabIndex = 11;
             // 
             // btnRoom20
             // 
@@ -294,6 +247,57 @@
             this.btnRoom11.TabIndex = 8;
             this.btnRoom11.Text = "111";
             this.btnRoom11.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label14.Location = new System.Drawing.Point(797, 308);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 20);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Cleaning";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label10.Location = new System.Drawing.Point(653, 307);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Booked";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label12.Location = new System.Drawing.Point(505, 308);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 20);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Available";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.DarkOrange;
+            this.label13.Location = new System.Drawing.Point(770, 308);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 19);
+            this.label13.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(626, 307);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(21, 19);
+            this.label11.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Lime;
+            this.label9.Location = new System.Drawing.Point(478, 308);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 19);
+            this.label9.TabIndex = 11;
             // 
             // grbRoomStatus1
             // 

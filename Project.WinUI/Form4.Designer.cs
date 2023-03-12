@@ -35,6 +35,7 @@
             this.listProduct = new System.Windows.Forms.ListBox();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -63,12 +64,13 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(692, 305);
+            this.btnOrder.Location = new System.Drawing.Point(692, 283);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(75, 23);
             this.btnOrder.TabIndex = 10;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // listProduct
             // 
@@ -95,12 +97,23 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add Room";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTotal.Location = new System.Drawing.Point(365, 278);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(134, 28);
+            this.lblTotal.TabIndex = 14;
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbRoomNo);
@@ -110,6 +123,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
 
         }
@@ -123,5 +137,6 @@
         private System.Windows.Forms.ListBox listProduct;
         private System.Windows.Forms.ComboBox cmbProduct;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

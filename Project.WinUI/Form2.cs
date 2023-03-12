@@ -17,11 +17,16 @@ namespace Project.WinUI
         string _appUserName;
         AppUserRep _appUserRep;
         RoomRep _roomRep;
+        ReservationRep _reservationRep;
+        GuestRep _guestRep;
         public  Form2(/*string _appUserName*/)
         {
-            InitializeComponent();
             _appUserRep = new AppUserRep();
             _roomRep = new RoomRep();
+            _reservationRep = new ReservationRep();
+            _guestRep = new GuestRep();
+            InitializeComponent();
+            
             //foreach (Char s in _appUserName)
             //{
             //   s.ToString();
@@ -67,15 +72,58 @@ namespace Project.WinUI
             c.ReservationName = txtRegistrationName.Text;
             
             Reservation r = new Reservation();
-            //foreach ( AppUser item in _appUserRep.GetAll())
+            //foreach (AppUser item in _appUserRep.GetAll())
             //{
-            //    if (item.UserName == _appUserName) item.ReceptionPersonel = r.ReceptionPersonel;
+            //    if (item.UserName == _appUserName)
+            //    {
+            //        r.ReceptionPersonel = item.ReceptionPersonel;
+            //        r.ReceptionPersonelID = item.ReceptionPersonel.ID;
+            //    }
             //}
             r.CheckInDate = dtpCheckIn.Value;
             r.CheckOutDate = dtpCheckOut.Value;
             r.Customer = c;
+            r.CustomerID = c.ID;
+            c.Reservations.Add(r);
             
           
+        }
+
+        private void btnSearchRes_Click(object sender, EventArgs e)
+        {
+           Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
+            if(res != null)
+            {
+                Form frm3 = new Form3(res);
+                frm3.ShowDialog();
+            }
+            
+        }
+
+        private void btnRoomService_Click(object sender, EventArgs e)
+        {
+            Form frm4 = new Form4();
+            frm4.ShowDialog();
+        }
+
+        private void btnGuestList_Click(object sender, EventArgs e)
+        {
+            Form frm5 = new Form5(_guestRep.GetActives().ToList());
+            frm5.ShowDialog();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
+            if (res != null)
+            {
+                
+                res.CheckOutDate= DateTime.Now;
+                _reservationRep.Update(res);
+                _reservationRep.Delete(res);
+
+                // devam edilecek
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.ENTITIES.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Project.WinUI
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(Reservation res)
         {
             InitializeComponent();
         }

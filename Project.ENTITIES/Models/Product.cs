@@ -19,5 +19,10 @@ namespace Project.ENTITIES.Models
         {
             this.OrderProducts = new List<OrderProduct>();
         }
+
+        public override string ToString()
+        {
+            return $"{ProductName} {UnitPrice:C2}";
+        }
     }
 }
