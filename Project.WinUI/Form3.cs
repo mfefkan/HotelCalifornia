@@ -49,7 +49,9 @@ namespace Project.WinUI
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            
+            Form s = new Form2();
+            s.ShowDialog();
+            this.Hide();
         }
 
         private void btnAddGuest_Click(object sender, EventArgs e)

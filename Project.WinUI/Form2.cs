@@ -30,7 +30,15 @@ namespace Project.WinUI
             InitializeComponent();
             _appUserName = a;
             
-            
+        }
+        public Form2()
+        {
+            InitializeComponent();
+            _appUserRep = new AppUserRep();
+            _roomRep = new RoomRep();
+            _reservationRep = new ReservationRep();
+            _guestRep = new GuestRep();
+            _roomReservationRep = new RoomReservationRep();
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -98,9 +106,10 @@ namespace Project.WinUI
                 rr.Room = item;
                 rr.RoomID = item.ID;
                 rr.ReservationID = r.ID;
+                rr.Room.RoomStatus = ENTITIES.Enums.RoomStatus.Booked;
                 _roomReservationRep.Add(rr);
             }
-
+            
             Form frm3 = new Form3(r);
             frm3.ShowDialog();
 

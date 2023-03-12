@@ -38,6 +38,7 @@ namespace Project.WinUI
                 string a = txtUserName.Text;
                 Form frm2 = new Form2(a);
                 frm2.ShowDialog();
+                this.Hide();
 
             }
             else
@@ -224,15 +225,16 @@ namespace Project.WinUI
         {
             AppUser user = new AppUser();
             ReceptionPersonel receptionPersonel = new ReceptionPersonel();
+           
             user.ReceptionPersonel = receptionPersonel;
             
-            user.UserName = "";
-            user.Password = "";
-            receptionPersonel.FirstName = "Hacı Muro";
-            receptionPersonel.LastName = "Türkoğlu";
+            user.UserName = "asd";
+            user.Password = "123";
+            user.ReceptionPersonel.FirstName = "Hacı Muro";
+            user.ReceptionPersonel.LastName = "Türkoğlu";
            
             _appUserRep.Add(user);
-            _receptionPersonelRep.Add(receptionPersonel);
+           // _receptionPersonelRep.Add(user.ReceptionPersonel); // Bunu da ekleyince problem çıkıyor. User'i eklemek yeterli oluyor.DB'den kontrol edildi.
             btnAddAppUser.BackColor = Color.Green;
 
         }
