@@ -19,12 +19,14 @@ namespace Project.WinUI
         RoomRep _roomRep;
         ReservationRep _reservationRep;
         GuestRep _guestRep;
+        RoomReservationRep _roomReservationRep;
         public  Form2(/*string _appUserName*/)
         {
             _appUserRep = new AppUserRep();
             _roomRep = new RoomRep();
             _reservationRep = new ReservationRep();
             _guestRep = new GuestRep();
+            _roomReservationRep = new RoomReservationRep();
             InitializeComponent();
             
             //foreach (Char s in _appUserName)
@@ -84,9 +86,21 @@ namespace Project.WinUI
             r.CheckOutDate = dtpCheckOut.Value;
             r.Customer = c;
             r.CustomerID = c.ID;
-            c.Reservations.Add(r);
-            
-          
+            c.Reservations.Add(r);        
+
+            foreach (Room item in lstPreRes.Items)
+            {
+                RoomReservation rr = new RoomReservation();
+                rr.Reservation = r;
+                rr.Room = item;
+                rr.RoomID = item.ID;
+                rr.ReservationID = r.ID;
+                _roomReservationRep.Add(rr);
+            }
+
+            Form frm3 = new Form3(r);
+            frm3.ShowDialog();
+
         }
 
         private void btnSearchRes_Click(object sender, EventArgs e)
@@ -125,5 +139,17 @@ namespace Project.WinUI
                 // devam edilecek
             }
         }
+
+        private void btnRoom18_Click(object sender, EventArgs e)
+        {
+            foreach (Room item in _roomRep.GetAll())
+            {
+                if (item.RoomNo == (sender as Button).Text)
+                {
+                    lstPreRes.Items.Add(item);
+                }
+            }
+        }
+
     }
 }

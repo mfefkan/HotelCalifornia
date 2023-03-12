@@ -30,5 +30,10 @@ namespace Project.ENTITIES.Models
             RoomStatus = RoomStatus.Available;
             this.HouseKeeperRooms = new List<HouseKeeperRoom>();
         }
+
+        public override string ToString()
+        {
+            return $"Room No:{RoomNo}, {Description}";
+        }
     }
 }

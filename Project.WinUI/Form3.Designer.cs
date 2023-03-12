@@ -64,6 +64,7 @@
             this.btnDone.TabIndex = 19;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // lstRoomVisitors
             // 
@@ -82,6 +83,7 @@
             this.btnAddVisitorInfo.TabIndex = 17;
             this.btnAddVisitorInfo.Text = "Add Visitor Info";
             this.btnAddVisitorInfo.UseVisualStyleBackColor = true;
+            this.btnAddVisitorInfo.Click += new System.EventHandler(this.btnAddVisitorInfo_Click);
             // 
             // label5
             // 
@@ -101,6 +103,7 @@
             this.lstSelectedRooms.Name = "lstSelectedRooms";
             this.lstSelectedRooms.Size = new System.Drawing.Size(308, 100);
             this.lstSelectedRooms.TabIndex = 15;
+            this.lstSelectedRooms.SelectedIndexChanged += new System.EventHandler(this.lstSelectedRooms_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -152,6 +155,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

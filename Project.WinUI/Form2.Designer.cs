@@ -151,7 +151,7 @@
             this.grbRoomStatus2.Controls.Add(this.btnRoom11);
             this.grbRoomStatus2.Location = new System.Drawing.Point(475, 337);
             this.grbRoomStatus2.Name = "grbRoomStatus2";
-            this.grbRoomStatus2.Size = new System.Drawing.Size(392, 128);
+            this.grbRoomStatus2.Size = new System.Drawing.Size(411, 128);
             this.grbRoomStatus2.TabIndex = 19;
             this.grbRoomStatus2.TabStop = false;
             this.grbRoomStatus2.Text = "4 People";
@@ -164,6 +164,7 @@
             this.btnRoom18.TabIndex = 8;
             this.btnRoom18.Text = "118";
             this.btnRoom18.UseVisualStyleBackColor = true;
+            this.btnRoom18.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom14
             // 
@@ -173,6 +174,7 @@
             this.btnRoom14.TabIndex = 8;
             this.btnRoom14.Text = "114";
             this.btnRoom14.UseVisualStyleBackColor = true;
+            this.btnRoom14.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom17
             // 
@@ -182,6 +184,7 @@
             this.btnRoom17.TabIndex = 8;
             this.btnRoom17.Text = "117";
             this.btnRoom17.UseVisualStyleBackColor = true;
+            this.btnRoom17.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom13
             // 
@@ -191,6 +194,7 @@
             this.btnRoom13.TabIndex = 8;
             this.btnRoom13.Text = "113";
             this.btnRoom13.UseVisualStyleBackColor = true;
+            this.btnRoom13.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom20
             // 
@@ -200,6 +204,7 @@
             this.btnRoom20.TabIndex = 8;
             this.btnRoom20.Text = "120";
             this.btnRoom20.UseVisualStyleBackColor = true;
+            this.btnRoom20.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom16
             // 
@@ -209,6 +214,7 @@
             this.btnRoom16.TabIndex = 8;
             this.btnRoom16.Text = "116";
             this.btnRoom16.UseVisualStyleBackColor = true;
+            this.btnRoom16.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom12
             // 
@@ -219,6 +225,7 @@
             this.btnRoom12.TabIndex = 8;
             this.btnRoom12.Text = "112";
             this.btnRoom12.UseVisualStyleBackColor = false;
+            this.btnRoom12.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom19
             // 
@@ -228,6 +235,7 @@
             this.btnRoom19.TabIndex = 8;
             this.btnRoom19.Text = "119";
             this.btnRoom19.UseVisualStyleBackColor = true;
+            this.btnRoom19.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom15
             // 
@@ -237,6 +245,7 @@
             this.btnRoom15.TabIndex = 8;
             this.btnRoom15.Text = "115";
             this.btnRoom15.UseVisualStyleBackColor = true;
+            this.btnRoom15.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom11
             // 
@@ -247,6 +256,7 @@
             this.btnRoom11.TabIndex = 8;
             this.btnRoom11.Text = "111";
             this.btnRoom11.UseVisualStyleBackColor = false;
+            this.btnRoom11.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // label14
             // 
@@ -314,7 +324,7 @@
             this.grbRoomStatus1.Controls.Add(this.btnRoom1);
             this.grbRoomStatus1.Location = new System.Drawing.Point(475, 168);
             this.grbRoomStatus1.Name = "grbRoomStatus1";
-            this.grbRoomStatus1.Size = new System.Drawing.Size(392, 131);
+            this.grbRoomStatus1.Size = new System.Drawing.Size(411, 123);
             this.grbRoomStatus1.TabIndex = 20;
             this.grbRoomStatus1.TabStop = false;
             this.grbRoomStatus1.Text = "2 People";
@@ -327,6 +337,7 @@
             this.btnRoom8.TabIndex = 8;
             this.btnRoom8.Text = "108";
             this.btnRoom8.UseVisualStyleBackColor = true;
+            this.btnRoom8.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom4
             // 
@@ -336,6 +347,7 @@
             this.btnRoom4.TabIndex = 8;
             this.btnRoom4.Text = "104";
             this.btnRoom4.UseVisualStyleBackColor = true;
+            this.btnRoom4.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom7
             // 
@@ -345,6 +357,7 @@
             this.btnRoom7.TabIndex = 8;
             this.btnRoom7.Text = "107";
             this.btnRoom7.UseVisualStyleBackColor = true;
+            this.btnRoom7.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom3
             // 
@@ -354,6 +367,7 @@
             this.btnRoom3.TabIndex = 8;
             this.btnRoom3.Text = "103";
             this.btnRoom3.UseVisualStyleBackColor = true;
+            this.btnRoom3.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom10
             // 
@@ -363,6 +377,7 @@
             this.btnRoom10.TabIndex = 8;
             this.btnRoom10.Text = "110";
             this.btnRoom10.UseVisualStyleBackColor = true;
+            this.btnRoom10.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom6
             // 
@@ -372,6 +387,7 @@
             this.btnRoom6.TabIndex = 8;
             this.btnRoom6.Text = "106";
             this.btnRoom6.UseVisualStyleBackColor = true;
+            this.btnRoom6.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom2
             // 
@@ -382,6 +398,7 @@
             this.btnRoom2.TabIndex = 8;
             this.btnRoom2.Text = "102";
             this.btnRoom2.UseVisualStyleBackColor = false;
+            this.btnRoom2.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom9
             // 
@@ -391,6 +408,7 @@
             this.btnRoom9.TabIndex = 8;
             this.btnRoom9.Text = "109";
             this.btnRoom9.UseVisualStyleBackColor = true;
+            this.btnRoom9.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom5
             // 
@@ -400,6 +418,7 @@
             this.btnRoom5.TabIndex = 8;
             this.btnRoom5.Text = "105";
             this.btnRoom5.UseVisualStyleBackColor = true;
+            this.btnRoom5.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // btnRoom1
             // 
@@ -410,6 +429,7 @@
             this.btnRoom1.TabIndex = 8;
             this.btnRoom1.Text = "101";
             this.btnRoom1.UseVisualStyleBackColor = false;
+            this.btnRoom1.Click += new System.EventHandler(this.btnRoom18_Click);
             // 
             // lstPreRes
             // 
