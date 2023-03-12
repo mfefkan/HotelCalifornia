@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnGuestList = new System.Windows.Forms.Button();
             this.btnRoomService = new System.Windows.Forms.Button();
-            this.btnSearchRes = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
@@ -72,16 +70,6 @@
             this.grbRoomStatus1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.Location = new System.Drawing.Point(193, 417);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(168, 48);
-            this.btnCheckOut.TabIndex = 27;
-            this.btnCheckOut.Text = "Check Out";
-            this.btnCheckOut.UseVisualStyleBackColor = true;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
             // btnGuestList
             // 
             this.btnGuestList.Location = new System.Drawing.Point(193, 348);
@@ -94,23 +82,13 @@
             // 
             // btnRoomService
             // 
-            this.btnRoomService.Location = new System.Drawing.Point(193, 295);
+            this.btnRoomService.Location = new System.Drawing.Point(193, 260);
             this.btnRoomService.Name = "btnRoomService";
             this.btnRoomService.Size = new System.Drawing.Size(168, 42);
             this.btnRoomService.TabIndex = 25;
             this.btnRoomService.Text = "Room Service";
             this.btnRoomService.UseVisualStyleBackColor = true;
             this.btnRoomService.Click += new System.EventHandler(this.btnRoomService_Click);
-            // 
-            // btnSearchRes
-            // 
-            this.btnSearchRes.Location = new System.Drawing.Point(193, 221);
-            this.btnSearchRes.Name = "btnSearchRes";
-            this.btnSearchRes.Size = new System.Drawing.Size(168, 46);
-            this.btnSearchRes.TabIndex = 24;
-            this.btnSearchRes.Text = "Search Reservation";
-            this.btnSearchRes.UseVisualStyleBackColor = true;
-            this.btnSearchRes.Click += new System.EventHandler(this.btnSearchRes_Click);
             // 
             // btnRegister
             // 
@@ -479,12 +457,10 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnGuestList);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnRoomService);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnSearchRes);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.dtpCheckOut);
@@ -507,11 +483,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnGuestList;
         private System.Windows.Forms.Button btnRoomService;
-        private System.Windows.Forms.Button btnSearchRes;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;

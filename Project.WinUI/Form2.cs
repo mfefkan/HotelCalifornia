@@ -20,6 +20,7 @@ namespace Project.WinUI
         ReservationRep _reservationRep;
         GuestRep _guestRep;
         RoomReservationRep _roomReservationRep;
+        HouseKeeperRep _houseKeeperRep;
         public  Form2(string a)
         {
             _appUserRep = new AppUserRep();
@@ -27,6 +28,7 @@ namespace Project.WinUI
             _reservationRep = new ReservationRep();
             _guestRep = new GuestRep();
             _roomReservationRep = new RoomReservationRep();
+            _houseKeeperRep = new HouseKeeperRep();
             InitializeComponent();
             _appUserName = a;
             
@@ -39,6 +41,7 @@ namespace Project.WinUI
             _reservationRep = new ReservationRep();
             _guestRep = new GuestRep();
             _roomReservationRep = new RoomReservationRep();
+            _houseKeeperRep = new HouseKeeperRep();
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -62,7 +65,8 @@ namespace Project.WinUI
                             }
                             else if (item.RoomStatus == ENTITIES.Enums.RoomStatus.Cleaning)
                             {
-                                //Hizmetli metodu
+                                    _houseKeeperRep.CleanRoom(item.RoomNo);
+                                    panel.Enabled = true;
                             }
                             if (panel.BackColor == Color.Red) panel.Enabled = false;
                             else if (panel.BackColor == Color.Orange) panel.Enabled = false;
@@ -71,6 +75,20 @@ namespace Project.WinUI
                 }
                 
             }
+
+            foreach (Reservation item in _reservationRep.GetActives())
+            {
+               if( item.CheckOutDate >= DateTime.Now)
+                {
+                    foreach (RoomReservation item1 in item.RoomReservations)
+                    {
+                        item1.Room.RoomStatus = ENTITIES.Enums.RoomStatus.Cleaning;
+                    }
+
+                    item.Status = ENTITIES.Enums.DataStatus.Deleted;
+                }
+            }
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -89,7 +107,6 @@ namespace Project.WinUI
                 if (item.UserName == _appUserName)
                 {
                     r.ReceptionPersonel = item.ReceptionPersonel;
-                    //r.ReceptionPersonelID = item.ReceptionPersonel.ID;
                 }
             }
             r.CheckInDate = dtpCheckIn.Value;
@@ -115,21 +132,23 @@ namespace Project.WinUI
 
         }
 
-        private void btnSearchRes_Click(object sender, EventArgs e)
-        {
-           Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
-            if(res != null)
-            {
-                Form frm3 = new Form3(res);
-                frm3.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Aradığınız isimde rezervasyon bulunamadı");
-                return;
-            }
+        //private void btnSearchRes_Click(object sender, EventArgs e)
+        //{
             
-        }
+
+        //   Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
+        //    if(res != null)
+        //    {
+        //        Form frm3 = new Form3(res);
+        //        frm3.ShowDialog();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Aradığınız isimde rezervasyon bulunamadı");
+        //        return;
+        //    }
+            
+        //}
 
         private void btnRoomService_Click(object sender, EventArgs e)
         {
@@ -143,19 +162,19 @@ namespace Project.WinUI
             frm5.ShowDialog();
         }
 
-        private void btnCheckOut_Click(object sender, EventArgs e)
-        {
-            Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
-            if (res != null)
-            {
+        //private void btnCheckOut_Click(object sender, EventArgs e)
+        //{
+        //    Reservation res = _reservationRep.GetReservationByReservationName(txtRegistrationName.Text);
+        //    if (res != null)
+        //    {
                 
-                res.CheckOutDate= DateTime.Now;
-                _reservationRep.Update(res);
-                _reservationRep.Delete(res);
+        //        res.CheckOutDate= DateTime.Now;
+        //        _reservationRep.Update(res);
+        //        _reservationRep.Delete(res);
 
-                // devam edilecek
-            }
-        }
+        //        // devam edilecek
+        //    }
+        //}
 
         private void btnRoom18_Click(object sender, EventArgs e)
         {
@@ -167,6 +186,7 @@ namespace Project.WinUI
                 }
             }
         }
+
 
     }
 }

@@ -19,5 +19,7 @@ namespace Project.ENTITIES.Models
         {
             this.HouseKeeperRooms = new List<HouseKeeperRoom>();
         }
+
+
     }
 }
